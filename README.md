@@ -1,2 +1,25 @@
 # RemoteExecutor
-Remote execution of files acorss networks via SSH and execute payload on remote machines
+Remote execution of files across networked machines via SSH and execute payload on remote machines
+- Can use jumpservers
+  - Settings such as port forwarding
+  - Handling of credential / key based authentication
+  - Elevation of priv's via "sudo"
+    - Can adjust the commands for elevation as needed
+- Fileless based execution of different interpreters
+  - bash, python, ruby (not limited to)
+  - Encodes payload in base64 and sends to remote asset under evalaution
+  - Captures output and stores it locally
+- File oriented execution of different interpreters
+  - bash, python, ruby (not limited to)
+  - SFTP to users home directory
+  - Changes permissions on file at rest on target asset
+  - Executes payload as a file on disk on target system and captures output
+  - Captures output and stores it locally
+- CIS Benchmarks
+  - Loads python disctionary of test cases with descriptions, commands, and any mappings such as NIST, MITRE
+  - Executes payloads as commands on target machine under assessment
+  - Captures output and stores it locally
+- Logging provided captures all output
+  - Stores log files local to the execution of this python script
+  - Captures all content from target asset under assessment
+  - Can clean all control characters from output
