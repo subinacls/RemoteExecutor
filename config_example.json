@@ -1,0 +1,87 @@
+{
+    "jump_servers": [
+        {
+            "ip": "IPv4 or IPv6",
+            "port": "PORT HERE",
+            "username": "USERNAME HERE",
+            "credential": "PASSWD or KEY HERE",
+            "ssh_options": {
+                "look_for_keys": false,
+                "allow_agent": false
+            },
+            "port_forwarding": {
+                "local_port": 22,
+                "remote_host": "127.0.0.1",
+                "remote_port": 221
+            },
+            "socks5_proxy": {
+                "local_port": 1081
+            }
+        },
+        {
+            "ip": "IPv4 or IPv6",
+            "port": "PORT HERE",
+            "username": "USERNAME HERE",
+            "credential": "PASSWD or KEY HERE",
+            "ssh_options": {
+                "look_for_keys": false,
+                "allow_agent": false
+            },
+            "port_forwarding": {
+                "local_port": 22,
+                "remote_host": "127.0.0.1",
+                "remote_port": 222
+            },
+            "socks5_proxy": {
+                "local_port": 1082
+            }
+        }
+    ],
+    "tasks": [
+        {
+            "type": "fileless",
+            "language": "bash",
+            "local_file": "./Snake.nocomments.sh",
+            "remote_path": "~/Snake.nocomments.sh",
+            "cleanup": true
+        },
+        {
+            "type": "fileless",
+            "language": "python",
+            "local_file": "./mypython.py",
+            "remote_path": "~/mypython.py",
+            "cleanup": true
+        }
+    ],
+    "targets": [
+        {
+            "ip": "IPv4 or IPv6",
+            "port": "PORT HERE",
+            "username": "USERNAME HERE",
+            "credential": "PASSWD or KEY HERE",
+            "ssh_options": {
+                "look_for_keys": false,
+                "allow_agent": false
+            },
+            "port_forwarding": {
+                "local_port": 22,
+                "remote_host": "127.0.0.1",
+                "remote_port": 223
+            },
+            "socks5_proxy": {
+                "local_port": 1083
+            }
+
+        },
+        {
+            "ip": "IPv4 or IPv6",
+            "port": "PORT HERE",
+            "username": "USERNAME HERE",
+            "credential": "PASSWD or KEY HERE",
+            "ssh_options": {
+                "look_for_keys": false,
+                "allow_agent": false
+            }
+        }
+    ]
+}
